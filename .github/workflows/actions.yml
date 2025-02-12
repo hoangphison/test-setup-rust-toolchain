@@ -7,19 +7,10 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Extensions
+    name: Testing
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler: '2.3.24'
-          bundler-cache: true
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: 1.69.0
